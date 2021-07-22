@@ -47,7 +47,7 @@
 @if ($errors->any())
 
 <script>
-    toastr.warning("Please check the form below for errors", '', {
+    toastr.warning("Veuillez vérifier le formulaire ci-dessous pour les erreurs", '', {
         hideMethod: 'slideUp',
         showMethod: 'fadeIn',
     });
