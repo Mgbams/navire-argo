@@ -39,7 +39,6 @@ label {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 2px solid green;
 }
 
 .new-member-form {
@@ -66,8 +65,9 @@ button {
   background-size: 150%;
   background-position: right;
   transition: 1s;
-  margin-top: 8px;
-  margin-left: 5px;
+  position: relative;
+  left: 10px;
+  top: 2px;
 }
 
 button:hover {
@@ -102,7 +102,7 @@ footer {
   background: #f76c6c;
   padding: 0.25em 0;
   /*Make the footer rest at the bottom of the page*/
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 }

@@ -41,7 +41,7 @@
         <section class="member-list">
             @if($argonautes)
             @foreach($argonautes as $argonaute)
-            <div class="member-item">{{ $argonaute->name }}</div>
+            <div class="member-item">{{ ucfirst($argonaute->name) }}</div>
             @endforeach
             @endif
         </section>
