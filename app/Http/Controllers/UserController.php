@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +15,14 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+        $argonautes = User::all();
+
+        //dd($argonautes);
+
+        return view('welcome', [
+            'argonautes' => $argonautes
+        ]);
     }
 
     /**
@@ -34,7 +43,15 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        User::create($request->all());
+
+        return back()->with('success', 'Item created successfully!');
+
+        //return redirect()->route('users.index')->with('success', 'Argonaute created successfully.');
     }
 
     /**
