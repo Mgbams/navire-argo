@@ -26,18 +26,18 @@
         <h2>Ajouter un(e) Argonaute</h2>
 
         <!-- Add flash messages -->
-
         @include('notification')
 
         <form class="new-member-form" action="{{ route('users.store') }}" method="POST">
             @csrf
             <label for="name">Nom de l&apos;Argonaute</label>
-            <input id="name" name="name" type="text" placeholder="Charalampos" />
-            <button type="submit">Envoyer</button>
+            <input id="name" name="name" type="text" class="form__input" placeholder="Charalampos" />
+            <button type="submit" class="btn btn-info">Envoyer</button>
         </form>
 
         <!-- Member list -->
         <h2>Membres de l'équipage</h2>
+
         <section class="member-list">
             @if($argonautes)
             @foreach($argonautes as $argonaute)
@@ -50,6 +50,7 @@
     <footer>
         <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
     </footer>
+
 </body>
 
 </html>

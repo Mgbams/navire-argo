@@ -34,13 +34,22 @@ label {
   margin-bottom: 0.5em;
 }
 
+.member-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .new-member-form {
   margin: 2em 0 4em 0;
   text-align: center;
 }
 
-.member-item {
+.member-list > .member-item {
   padding: 0.25em 0;
+  flex: 1 1 30%; /*grow | shrink | basis */
+  border: 2px solid yellow;
 }
 
 footer {
@@ -49,4 +58,9 @@ footer {
   color: #fff;
   background: #f76c6c;
   padding: 0.25em 0;
+ 
+  /*Make the footer rest at the bottom of the page*/
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
