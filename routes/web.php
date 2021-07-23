@@ -15,6 +15,11 @@ use App\Http\Controllers\UserController;
 */
 
 
-Route::resource('users', UserController::class);
 
-Route::get('/', 'App\Http\Controllers\UserController@index');
+
+Route::group(['middleware' => ['XssSanitizer']], function () {
+
+    Route::resource('users', UserController::class);
+
+    Route::get('/', 'App\Http\Controllers\UserController@index');
+});
