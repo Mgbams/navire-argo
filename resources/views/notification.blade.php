@@ -16,7 +16,18 @@
 
 @endif
 
+@if ($errors->any())
 
+<script>
+    toastr.warning("Veuillez vérifier le formulaire ci-dessous pour les erreurs", '', {
+        hideMethod: 'slideUp',
+        showMethod: 'fadeIn',
+    });
+</script>
+
+@endif
+
+<!-- 
 @if ($message = Session::get('error'))
 
 <script>
@@ -41,16 +52,4 @@
     toastr.info("{!! $message !!}");
 </script>
 
-@endif
-
-
-@if ($errors->any())
-
-<script>
-    toastr.warning("Veuillez vérifier le formulaire ci-dessous pour les erreurs", '', {
-        hideMethod: 'slideUp',
-        showMethod: 'fadeIn',
-    });
-</script>
-
-@endif
+@endif -->

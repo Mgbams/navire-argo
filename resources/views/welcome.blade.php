@@ -25,7 +25,7 @@
         <!-- New member form -->
         <h2>Ajouter un(e) Argonaute</h2>
 
-        <!-- Add flash messages -->
+        <!-- Add notification messages -->
         @include('notification')
 
         <form class="new-member-form" action="{{ route('users.store') }}" method="POST">
