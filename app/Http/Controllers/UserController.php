@@ -18,8 +18,6 @@ class UserController extends Controller
 
         $argonautes = User::all();
 
-        //dd($argonautes);
-
         return view('welcome', [
             'argonautes' => $argonautes
         ]);
@@ -49,7 +47,7 @@ class UserController extends Controller
 
         User::create($request->all());
 
-        return back()->with('success', 'Item created successfully!');
+        return back()->with('success', 'Élément créé avec succès!');
 
         //return redirect()->route('users.index')->with('success', 'Argonaute created successfully.');
     }

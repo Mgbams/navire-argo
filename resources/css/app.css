@@ -97,7 +97,6 @@ button:focus {
     border: none;
     width: 30%;
     border-bottom: 0.3rem solid transparent;
-    transition: all 0.3s;
 }
 
 /* Footer styles*/
