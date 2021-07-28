@@ -31,7 +31,7 @@
         <form class="new-member-form" action="{{ route('users.store') }}" method="POST">
             @csrf
             <label for="name">Nom de l&apos;Argonaute</label>
-            <input id="name" name="name" type="text" class="form__input" placeholder="Charalampos" />
+            <input id="name" name="name" type="text" class="form__input" placeholder="Charalampos" autocomplete="off" />
             <button type="submit" class="btn btn-info">Envoyer</button>
         </form>
 
